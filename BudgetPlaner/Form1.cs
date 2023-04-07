@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace BudgetPlaner
 {
@@ -17,44 +18,14 @@ namespace BudgetPlaner
         public Form1()
         {
             InitializeComponent();
-            LoadData();
+            LoadData("SELECT * FROM data;");
         }
-
-        /**
-        public static MySqlConnection ConnectDB()
-        {
-            string db = "datasource=localhost;port=3306;username=root;password=;database=budget-planner";
-            MySqlConnection conn = new MySqlConnection(db);
-            try
-            {
-                conn.Open();
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("MySQL Connection! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return conn;
-        }
-        public static void dataTableFill(string query, MySqlConnection conn)
-        {
-            ConnectDB();
-            
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            DataTable.DataSource = dt;
-
-
-            conn.Close();
-        }
-        **/
-        private void LoadData()
+        private void LoadData(string sql)
         {
             string connectionString = "server=localhost;database=budget-planner;uid=root;pwd=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand command = connection.CreateCommand();
-            command.CommandText = "SELECT * FROM data";
+            command.CommandText = sql;
 
             try
             {
@@ -88,11 +59,6 @@ namespace BudgetPlaner
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -100,6 +66,33 @@ namespace BudgetPlaner
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void filterButtonClick(object sender, EventArgs e)
+        {
+            string dateMin = "'" + dateFrom.Value.Date.Year + "-" + dateFrom.Value.Date.Month + "-" + dateFrom.Value.Date.Day + "'";
+            string dateMax = "'" + dateTo.Value.Date.Year + "-" + dateTo.Value.Date.Month + "-" + dateTo.Value.Date.Day + "'";
+            decimal valueM = valueFrom.Value;
+            string valueMin = valueM.ToString();
+            valueMin = valueMin.Replace(",", ".");
+            decimal valueX = valueTo.Value;
+            string valueMax = valueX.ToString();
+            valueMax = valueMax.Replace(",", ".");
+            LoadData("SELECT * FROM data WHERE date BETWEEN " + dateMin + " AND " + dateMax + " AND total BETWEEN " + valueMin + " AND " + valueMax + ";");
+            //MessageBox.Show("SELECT * FROM data WHERE date BETWEEN " + dateMin + " AND " + dateMax + " AND total BETWEEN " + valueMin + " AND " + valueMax + ";", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resetButtonClick(object sender, EventArgs e)
+        {
+            dateFrom.Value = new DateTime(2000,01,01);
+            dateTo.Value = new DateTime(2099, 12, 31);
+            valueFrom.Value = 0.00M;
+            valueTo.Value = 9999.00M;
         }
     }
 }
