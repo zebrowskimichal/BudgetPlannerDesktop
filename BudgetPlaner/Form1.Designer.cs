@@ -33,7 +33,7 @@ namespace BudgetPlaner
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.filterButton = new System.Windows.Forms.Button();
             this.valueTo = new System.Windows.Forms.NumericUpDown();
@@ -81,7 +81,7 @@ namespace BudgetPlaner
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.addButton);
             this.panel2.Controls.Add(this.resetButton);
             this.panel2.Controls.Add(this.filterButton);
             this.panel2.Controls.Add(this.valueTo);
@@ -94,15 +94,15 @@ namespace BudgetPlaner
             this.panel2.Size = new System.Drawing.Size(579, 436);
             this.panel2.TabIndex = 1;
             // 
-            // button3
+            // addButton
             // 
-            this.button3.Location = new System.Drawing.Point(378, 126);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 45);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.addButton.Location = new System.Drawing.Point(378, 126);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(87, 45);
+            this.addButton.TabIndex = 9;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButtonClick);
             // 
             // resetButton
             // 
@@ -233,7 +233,7 @@ namespace BudgetPlaner
         private System.Windows.Forms.Button filterButton;
         private System.Windows.Forms.NumericUpDown valueTo;
         private System.Windows.Forms.NumericUpDown valueFrom;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

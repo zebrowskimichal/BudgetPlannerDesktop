@@ -63,3 +63,4 @@ D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.csproj.Co
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.csproj.CopyComplete
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.exe
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.pdb
+D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.AddValue.resources

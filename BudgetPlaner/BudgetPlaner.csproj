@@ -84,8 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="budget-planner.cs" />
-    <Compile Include="DbBudget-planner.cs" />
+    <Compile Include="AddValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddValue.Designer.cs">
+      <DependentUpon>AddValue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +98,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddValue.resx">
+      <DependentUpon>AddValue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

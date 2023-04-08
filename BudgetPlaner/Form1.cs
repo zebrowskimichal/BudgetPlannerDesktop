@@ -94,5 +94,11 @@ namespace BudgetPlaner
             valueFrom.Value = 0.00M;
             valueTo.Value = 9999.00M;
         }
+
+        private void addButtonClick(object sender, EventArgs e)
+        {
+            AddValue form = new AddValue();
+            form.ShowDialog();
+        }
     }
 }
