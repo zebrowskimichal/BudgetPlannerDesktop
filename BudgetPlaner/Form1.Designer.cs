@@ -29,10 +29,14 @@ namespace BudgetPlaner
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.importButton = new System.Windows.Forms.Button();
+            this.saveToFile = new System.Windows.Forms.Button();
+            this.AddShop = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.filterButton = new System.Windows.Forms.Button();
@@ -53,7 +57,7 @@ namespace BudgetPlaner
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -72,6 +76,7 @@ namespace BudgetPlaner
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(293, -3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(584, 91);
@@ -81,6 +86,10 @@ namespace BudgetPlaner
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.importButton);
+            this.panel2.Controls.Add(this.saveToFile);
+            this.panel2.Controls.Add(this.AddShop);
             this.panel2.Controls.Add(this.addButton);
             this.panel2.Controls.Add(this.resetButton);
             this.panel2.Controls.Add(this.filterButton);
@@ -94,36 +103,72 @@ namespace BudgetPlaner
             this.panel2.Size = new System.Drawing.Size(579, 436);
             this.panel2.TabIndex = 1;
             // 
+            // importButton
+            // 
+            this.importButton.BackColor = System.Drawing.Color.White;
+            this.importButton.Location = new System.Drawing.Point(192, 187);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(87, 45);
+            this.importButton.TabIndex = 12;
+            this.importButton.Text = "Import from file";
+            this.importButton.UseVisualStyleBackColor = false;
+            this.importButton.Click += new System.EventHandler(this.importButtonClick);
+            // 
+            // saveToFile
+            // 
+            this.saveToFile.BackColor = System.Drawing.Color.White;
+            this.saveToFile.Location = new System.Drawing.Point(285, 187);
+            this.saveToFile.Name = "saveToFile";
+            this.saveToFile.Size = new System.Drawing.Size(87, 45);
+            this.saveToFile.TabIndex = 11;
+            this.saveToFile.Text = "Save To File";
+            this.saveToFile.UseVisualStyleBackColor = false;
+            this.saveToFile.Click += new System.EventHandler(this.saveToFile_Click);
+            // 
+            // AddShop
+            // 
+            this.AddShop.BackColor = System.Drawing.Color.White;
+            this.AddShop.Location = new System.Drawing.Point(378, 187);
+            this.AddShop.Name = "AddShop";
+            this.AddShop.Size = new System.Drawing.Size(87, 45);
+            this.AddShop.TabIndex = 10;
+            this.AddShop.Text = "Add Shop";
+            this.AddShop.UseVisualStyleBackColor = false;
+            this.AddShop.Click += new System.EventHandler(this.AddShop_Click);
+            // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.Color.White;
             this.addButton.Location = new System.Drawing.Point(378, 126);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(87, 45);
             this.addButton.TabIndex = 9;
             this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButtonClick);
             // 
             // resetButton
             // 
+            this.resetButton.BackColor = System.Drawing.Color.White;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.resetButton.Location = new System.Drawing.Point(252, 126);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(120, 45);
             this.resetButton.TabIndex = 8;
             this.resetButton.Text = "Reset";
-            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButtonClick);
             // 
             // filterButton
             // 
+            this.filterButton.BackColor = System.Drawing.Color.White;
             this.filterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.filterButton.Location = new System.Drawing.Point(126, 126);
             this.filterButton.Name = "filterButton";
             this.filterButton.Size = new System.Drawing.Size(120, 45);
             this.filterButton.TabIndex = 7;
             this.filterButton.Text = "Filter";
-            this.filterButton.UseVisualStyleBackColor = true;
+            this.filterButton.UseVisualStyleBackColor = false;
             this.filterButton.Click += new System.EventHandler(this.filterButtonClick);
             // 
             // valueTo
@@ -165,6 +210,9 @@ namespace BudgetPlaner
             // 
             // dateFrom
             // 
+            this.dateFrom.CalendarTitleBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dateFrom.CalendarTrailingForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dateFrom.Cursor = System.Windows.Forms.Cursors.Cross;
             this.dateFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateFrom.Location = new System.Drawing.Point(126, 7);
             this.dateFrom.Name = "dateFrom";
@@ -189,7 +237,7 @@ namespace BudgetPlaner
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -200,13 +248,18 @@ namespace BudgetPlaner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BudgetPlaner.Properties.Resources.testbg;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = global::BudgetPlaner.Properties.Resources.bggrey1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 561);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1200, 600);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Budget Planner";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -235,6 +288,9 @@ namespace BudgetPlaner
         private System.Windows.Forms.NumericUpDown valueFrom;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button AddShop;
+        private System.Windows.Forms.Button saveToFile;
+        private System.Windows.Forms.Button importButton;
     }
 }
 

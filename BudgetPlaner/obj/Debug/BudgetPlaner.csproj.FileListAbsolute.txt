@@ -56,7 +56,6 @@ D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\bin\Debug\System.Numerics.Vector
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.csproj.AssemblyReference.cache
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.csproj.SuggestedBindingRedirects.cache
-D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.Form1.resources
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.Properties.Resources.resources
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.csproj.GenerateResource.cache
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.csproj.CoreCompileInputs.cache
@@ -64,3 +63,5 @@ D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.csproj.Co
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.exe
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.pdb
 D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.AddValue.resources
+D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.addShop.resources
+D:\Studia\.NET\BudgetPlanerDesktop\BudgetPlaner\obj\Debug\BudgetPlaner.Form1.resources

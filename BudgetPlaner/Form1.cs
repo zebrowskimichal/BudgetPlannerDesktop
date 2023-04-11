@@ -5,11 +5,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
+using File = System.IO.File;
 
 namespace BudgetPlaner
 {
@@ -93,12 +96,38 @@ namespace BudgetPlaner
             dateTo.Value = new DateTime(2099, 12, 31);
             valueFrom.Value = 0.00M;
             valueTo.Value = 9999.00M;
+            LoadData("SELECT * FROM data;");
         }
 
         private void addButtonClick(object sender, EventArgs e)
         {
-            AddValue form = new AddValue();
-            form.ShowDialog();
+            AddValue AddValueForm = new AddValue();
+            AddValueForm.ShowDialog();
+        }
+
+        private void AddShop_Click(object sender, EventArgs e)
+        {
+            addShop addShopForm = new addShop();
+            addShopForm.ShowDialog();
+        }
+
+        private void saveToFile_Click(object sender, EventArgs e)
+        {
+            TextWriter writer = new StreamWriter(@"C:\Users\jamic\Desktop\dane.txt");
+            for(int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    writer.Write(dataGridView1.Rows[i].Cells[j].Value.ToString() + ";");
+                }
+                writer.WriteLine("");
+            }
+            writer.Close();
+            MessageBox.Show("Data exported!");
+        }
+        private void importButtonClick(object sender, EventArgs e)
+        {
+            
         }
     }
 }

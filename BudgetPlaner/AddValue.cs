@@ -58,12 +58,14 @@ namespace BudgetPlaner
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand command = connection.CreateCommand();
             string date = "'" + dateAdd.Value.Date.Year + "-" + dateAdd.Value.Date.Month + "-" + dateAdd.Value.Date.Day + "'";
-            //string shop = shopAdd.Value;
+            string shop = shopAdd.GetItemText(shopAdd.SelectedItem);
             decimal value = valueAdd.Value;
-            command.CommandText = "Insert into data values ";
+            command.CommandText = "INSERT INTO `data`(`date`, `shop`, `total`) VALUES (" + date + ", '" + shop + "', '" + value + "')";
             try
             {
                 connection.Open();
+                command.ExecuteNonQuery();
+                MessageBox.Show("Succesfully added value: " + date + ", " + shop + ", " + value);
             }
             catch (Exception ex)
             {
@@ -73,6 +75,11 @@ namespace BudgetPlaner
             {
                 connection.Close();
             }
+        }
+
+        private void AddValue_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

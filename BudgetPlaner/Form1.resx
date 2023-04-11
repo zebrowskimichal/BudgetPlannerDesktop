@@ -117,4 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAFBQAAAEAIAC4BgAAFgAAACgAAAAUAAAAKAAAAAEAIAAAAAAAQAYAAMMOAADDDgAAAAAAAAAA
+        AADDw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/0Hl//8Oyf///+3//8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/QeX//w7J
+        ////7f//w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w/9r5f//Dsn//w7J//8Oyf//Dsn//w7J//+T2/////b//8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/a+3//w7J//8Oyf//Dsn//w7J//8Oyf//Dsn//w7J//8Oyf//3OX//8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw/+5////Dsn//w7J//8Oyf//Dsn//w7J
+        //8Oyf//Dsn//w7J//9Byf////b//8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw/9B5f//Dsn////t//9r7f//Dsn//w7J////7f//w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/0Hl//8Oyf///+3//5Pt//8Oyf//Qcn////2
+        ///Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/3P///2vl//8O0///Dsn//w7J
+        //8Oyf//Dsn//w7J//+52///w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w/8O2///Dsn//w7J//8Oyf//Dsn//w7J//9B0///ueX//8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/uf///w7J//8Oyf//3OX//0Hl//8Oyf///+3//8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw/+5////Dsn//w7J//+52///QeX//w7J
+        ////7f//w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w/9B5f//Dsn//w7J//8Oyf//Dsn//w7J//8Oyf//Qcn////2///Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/9z///8O0///Dsn//w7J//8Oyf//Dsn//w7J//8Oyf///+3//8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/9z///9r5f//Dsn//w7J
+        //8Oyf//a9P//9zt///Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw/9B5f//Dsn////t///Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/2vt//9Byf////b//8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PD
+        w//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAA=
+</value>
+  </data>
 </root>

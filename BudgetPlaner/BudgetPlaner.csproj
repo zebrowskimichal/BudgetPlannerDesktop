@@ -96,8 +96,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="addShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addShop.Designer.cs">
+      <DependentUpon>addShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addShop.resx">
+      <DependentUpon>addShop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddValue.resx">
       <DependentUpon>AddValue.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +140,10 @@
   <ItemGroup>
     <None Include="Resources\wiesiu.jpg" />
     <None Include="Resources\testbg.png" />
+    <None Include="Resources\bggrey.jpg" />
+    <None Include="Resources\bggrey1.jpg" />
+    <None Include="Resources\shopgray %282%29.jpg" />
+    <None Include="Resources\roadgray.jpg" />
     <Content Include="test.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
