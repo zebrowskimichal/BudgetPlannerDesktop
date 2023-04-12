@@ -4,10 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -113,7 +115,10 @@ namespace BudgetPlaner
 
         private void saveToFile_Click(object sender, EventArgs e)
         {
-            TextWriter writer = new StreamWriter(@"C:\Users\jamic\Desktop\dane.txt");
+            string location = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+            string fileName = "/tekst.txt";
+            string path = location + fileName;
+            TextWriter writer = new StreamWriter(@path);
             for(int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
                 for (int j = 0; j < dataGridView1.Columns.Count; j++)
@@ -124,10 +129,15 @@ namespace BudgetPlaner
             }
             writer.Close();
             MessageBox.Show("Data exported!");
+            Process.Start(@location);
+            Process.Start(@path);
         }
         private void importButtonClick(object sender, EventArgs e)
         {
-            
+            AllocConsole();
         }
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
     }
 }

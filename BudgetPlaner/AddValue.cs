@@ -59,8 +59,9 @@ namespace BudgetPlaner
             MySqlCommand command = connection.CreateCommand();
             string date = "'" + dateAdd.Value.Date.Year + "-" + dateAdd.Value.Date.Month + "-" + dateAdd.Value.Date.Day + "'";
             string shop = shopAdd.GetItemText(shopAdd.SelectedItem);
-            decimal value = valueAdd.Value;
-            command.CommandText = "INSERT INTO `data`(`date`, `shop`, `total`) VALUES (" + date + ", '" + shop + "', '" + value + "')";
+            string value = valueAdd.Value.ToString();
+            string price = value.Replace(",", ".");
+            command.CommandText = "INSERT INTO `data`(`date`, `shop`, `total`) VALUES (" + date + ", '" + shop + "', '" + price + "')";
             try
             {
                 connection.Open();

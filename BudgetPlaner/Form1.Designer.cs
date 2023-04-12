@@ -110,7 +110,7 @@ namespace BudgetPlaner
             this.importButton.Name = "importButton";
             this.importButton.Size = new System.Drawing.Size(87, 45);
             this.importButton.TabIndex = 12;
-            this.importButton.Text = "Import from file";
+            this.importButton.Text = "Konsola";
             this.importButton.UseVisualStyleBackColor = false;
             this.importButton.Click += new System.EventHandler(this.importButtonClick);
             // 
@@ -195,6 +195,11 @@ namespace BudgetPlaner
             this.valueFrom.DecimalPlaces = 2;
             this.valueFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.valueFrom.Location = new System.Drawing.Point(126, 91);
+            this.valueFrom.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.valueFrom.Name = "valueFrom";
             this.valueFrom.Size = new System.Drawing.Size(120, 29);
             this.valueFrom.TabIndex = 5;
