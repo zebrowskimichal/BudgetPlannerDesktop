@@ -9,8 +9,10 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
@@ -20,6 +22,8 @@ namespace BudgetPlaner
 {
     public partial class Form1 : Form
     {
+        [DllImport("Kernel32")]
+        public static extern void AllocConsole();
         public Form1()
         {
             InitializeComponent();
@@ -135,9 +139,8 @@ namespace BudgetPlaner
         private void importButtonClick(object sender, EventArgs e)
         {
             AllocConsole();
+            
         }
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool AllocConsole();
+        
     }
 }
