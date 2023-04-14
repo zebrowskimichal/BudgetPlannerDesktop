@@ -51,7 +51,6 @@
             this.label1.Size = new System.Drawing.Size(339, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Budget planner";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dateAdd
             // 
@@ -93,7 +92,6 @@
             this.shopAdd.Name = "shopAdd";
             this.shopAdd.Size = new System.Drawing.Size(186, 28);
             this.shopAdd.TabIndex = 4;
-            this.shopAdd.SelectedIndexChanged += new System.EventHandler(this.shopList_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -157,7 +155,6 @@
             this.MinimumSize = new System.Drawing.Size(400, 500);
             this.Name = "AddValue";
             this.Text = "AddValue";
-            this.Load += new System.EventHandler(this.AddValue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.valueAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

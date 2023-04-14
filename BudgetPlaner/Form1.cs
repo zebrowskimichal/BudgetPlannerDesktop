@@ -22,8 +22,6 @@ namespace BudgetPlaner
 {
     public partial class Form1 : Form
     {
-        [DllImport("Kernel32")]
-        public static extern void AllocConsole();
         public Form1()
         {
             InitializeComponent();
@@ -53,30 +51,6 @@ namespace BudgetPlaner
                 connection.Close();
             }
         }
-            private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void filterButtonClick(object sender, EventArgs e)
         {
             string dateMin = "'" + dateFrom.Value.Date.Year + "-" + dateFrom.Value.Date.Month + "-" + dateFrom.Value.Date.Day + "'";
@@ -88,14 +62,7 @@ namespace BudgetPlaner
             string valueMax = valueX.ToString();
             valueMax = valueMax.Replace(",", ".");
             LoadData("SELECT * FROM data WHERE date BETWEEN " + dateMin + " AND " + dateMax + " AND total BETWEEN " + valueMin + " AND " + valueMax + ";");
-            //MessageBox.Show("SELECT * FROM data WHERE date BETWEEN " + dateMin + " AND " + dateMax + " AND total BETWEEN " + valueMin + " AND " + valueMax + ";", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void resetButtonClick(object sender, EventArgs e)
         {
             dateFrom.Value = new DateTime(2000,01,01);
@@ -136,11 +103,5 @@ namespace BudgetPlaner
             Process.Start(@location);
             Process.Start(@path);
         }
-        private void importButtonClick(object sender, EventArgs e)
-        {
-            AllocConsole();
-            
-        }
-        
     }
 }

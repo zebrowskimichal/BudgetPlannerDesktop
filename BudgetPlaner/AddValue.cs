@@ -42,15 +42,6 @@ namespace BudgetPlaner
                 connection.Close();
             }
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void shopList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void addValue(object sender, EventArgs e)
         {
@@ -76,11 +67,6 @@ namespace BudgetPlaner
             {
                 connection.Close();
             }
-        }
-
-        private void AddValue_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

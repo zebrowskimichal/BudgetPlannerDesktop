@@ -17,7 +17,6 @@ namespace BudgetPlaner
         {
             InitializeComponent();
         }
-
         private void shopAdd(object sender, EventArgs e)
         {
             string connectionString = "server=localhost;database=budget-planner;uid=root;pwd=;";
